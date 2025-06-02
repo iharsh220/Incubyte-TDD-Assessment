@@ -1,0 +1,47 @@
+{
+  "name": "nodejs-string-calculator-optimized",
+  "version": "2.0.0",
+  "description": "High-performance Node.js implementation of String Calculator with optimized algorithms and comprehensive testing",
+  "main": "src/StringCalculator.js",
+
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "benchmark": "node benchmark/performance.js",
+    "start": "node src/StringCalculator.js"
+  },
+  "keywords": [
+    "string-calculator",
+    "nodejs",
+    "performance",
+    "optimized",
+    "tdd",
+    "kata",
+    "fast",
+    "calculator"
+  ],
+  "author": "Optimized by AI Assistant",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "benchmark": "^2.1.4"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "transform": {},
+    "collectCoverageFrom": [
+      "src/**/*.js",
+      "!src/**/*.test.js"
+    ],
+    "coverageDirectory": "coverage",
+    "coverageReporters": [
+      "text",
+      "lcov",
+      "html"
+    ]
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
