@@ -3,6 +3,7 @@ const Operation = Object.freeze({
   MULTIPLICATION: 'multiplication'
 });
 
+// ADDITION, MULTIPLICATION
 const OperationSymbols = Object.freeze({
   '+': Operation.ADDITION,
   '*': Operation.MULTIPLICATION,
