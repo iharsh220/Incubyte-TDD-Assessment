@@ -1,3 +1,4 @@
+<!-- Everything mentioned in description -->
 # 🚀 String Calculator - High-Performance Node.js Implementation
 
 A production-ready, lightning-fast Node.js implementation of the String Calculator kata with advanced optimizations and enterprise-grade features.
