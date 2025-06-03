@@ -16,6 +16,7 @@ function extractDelimiter(input) {
   }
 
   const newlineIndex = input.indexOf('\n');
+
   if (newlineIndex === -1) {
     throw new Error('Invalid delimiter format: missing newline after delimiter declaration');
   }
@@ -24,6 +25,7 @@ function extractDelimiter(input) {
   const numbersSection = input.slice(newlineIndex + 1);
 
   let delimiter = delimiterCache.get(rawDelimiter);
+
   if (!delimiter) {
     const escapedDelimiter = rawDelimiter.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
     delimiter = new RegExp(escapedDelimiter, 'g');
@@ -31,9 +33,11 @@ function extractDelimiter(input) {
   }
 
   return { rawDelimiter, delimiter, numbersSection };
+
 }
 
 function splitNumbers(numbers, delimiter) {
+
   if (!numbers) return [];
 
   return numbers
@@ -44,13 +48,16 @@ function splitNumbers(numbers, delimiter) {
       const num = parseInt(str, 10);
       return isNaN(num) ? 0 : num;
     });
+
 }
 
 function validateNoNegatives(numbers) {
+
   const negatives = numbers.filter(num => num < 0);
   if (negatives.length > 0) {
     throw new Error(`Negative numbers not allowed: ${negatives.join(', ')}`);
   }
+
 }
 
 const calculationFunctions = Object.freeze({
