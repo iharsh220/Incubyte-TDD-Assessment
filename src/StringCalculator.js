@@ -23,9 +23,13 @@ class StringCalculator {
     }
 
     const { rawDelimiter, delimiter, numbersSection } = extractDelimiter(input);
+
     const operation = detectOperation(rawDelimiter);
+
     const numbers = splitNumbers(numbersSection, delimiter);
+
     validateNoNegatives(numbers);
+    
     return calculationFunctions[operation](numbers);
   }
 
