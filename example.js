@@ -1,3 +1,5 @@
+// all the calculation examples
+
 const { StringCalculator } = require('./src/StringCalculator.js');
 
 const calculator = new StringCalculator();
