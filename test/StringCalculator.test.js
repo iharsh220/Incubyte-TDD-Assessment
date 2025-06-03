@@ -111,7 +111,7 @@ describe('StringCalculator - Optimized Node.js Version', () => {
       const results = calculator.batchCalculate(inputs);
       expect(results).toEqual([3, 7, 11]);
     });
-
+    
     test('should handle empty batch', () => {
       expect(calculator.batchCalculate([])).toEqual([]);
     });
