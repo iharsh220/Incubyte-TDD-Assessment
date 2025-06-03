@@ -75,10 +75,13 @@ console.log('\n🧠 Memory Usage Test:');
 const memBefore = process.memoryUsage();
 
 for (let i = 0; i < 10000; i++) {
+
   calculator.calculate(testCases.medium);
+
 }
 
 const memAfter = process.memoryUsage();
+
 const memDiff = {
   rss: memAfter.rss - memBefore.rss,
   heapUsed: memAfter.heapUsed - memBefore.heapUsed,
